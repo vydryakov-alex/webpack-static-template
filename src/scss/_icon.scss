@@ -1,0 +1,61 @@
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: center;
+  transition: opacity 0.7s ease-in-out;
+
+  &__swiper {
+    height: 40px;
+    width: 40px;
+    background-image: url("../img/icon/swiper/swiper-go.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &__logo {
+    display: block;
+    width: 97px;
+    height: 51px;
+    background-image: url('../img/icon/logo.svg');
+    background-size: cover;
+    transition: opacity 0.7s ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__search {
+    background-image: url('../img/icon/icon-search.svg');
+  }
+}
+
+.icon__menu {
+  background-image: url("../img/icon/icon-menu.svg");
+}
+
+.icon__application {
+  background-image: url("../img/icon/icon-application.svg");
+}
+
+.icon__status {
+  background-image: url("../img/icon/icon-status.svg");
+}
+
+.icon__tel {
+  background-image: url("../img/icon/icon-tel.svg");
+}
+.icon__message {
+  background-image: url("../img/icon/icon-message.svg");
+}
+.icon__contacts {
+  background-image: url("../img/icon/icon-contacts.svg");
+}

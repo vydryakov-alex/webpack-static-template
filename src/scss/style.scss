@@ -1,17 +1,47 @@
-$bgColor: #24292e;
-$text: #fff;
+// @import '../scss/normalize.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import '~normalize.css';
+@import '../../node_modules/swiper/swiper.min.css';
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import '../scss/_base.scss';
+@import '../scss/_icon.scss';
+@import '../scss/_adaptability.scss';
+
+@import '../scss/menu/_menu.scss';
+@import '../scss/menu/_menu-footer.scss';
+
+@import '../scss/content/_content.scss';
+@import '../scss/content/_header.scss';
+@import '../scss/content/_nav.scss';
+@import '../scss/content/_content-menu.scss';
+@import '../scss/content/_description.scss';
+@import '../scss/content/_line.scss';
+@import '../scss/content/_swiper.scss';
+
+
+
+
+
+
+
+
+
+
+
+// $bgColor: #24292e;
+// $text: #fff;
+
+// @font-face {
+//   font-family: 'Comic';
+//   src: url('../fonts/comic.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: italic;
+// }
+
+// body {
+//   // padding: 1rem;
+//   // margin: 0;
+//   font-family: Comic, sans-serif;
+//   background-color: $bgColor;
+//   color: $text;
+// }

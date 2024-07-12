@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,262 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Сборка</title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <div class="container">
+      <main class="main">
+        <!-- menu -->
+        <div class="menu menu__container">
+          <!-- menu__header -->
+          <div class="menu__header">
+            <div class="menu__header--left">
+              <a href="#" class="icon menu__close-menu"></a>
+              <a href="#" class="icon__logo"></a>
+            </div>
+            <a href="#" class="icon icon__search"></a>
+          </div>
+          <!-- //menu__header -->
+
+          <!-- menu__list -->
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Ремонт техники</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Услуги и сервисы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Корпоративным клиентам</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Продавцам техники</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Партнерам</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Производителям</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Наши сервисные центры</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+          <!-- //menu__list -->
+
+          <!-- footer -->
+          <footer class="menu-footer">
+            <div class="menu-footer__icon">
+              <a href="#" class="icon icon__tel"></a>
+              <a href="#" class="icon icon__message"></a>
+              <a href="#" class="icon icon__contacts"></a>
+            </div>
+            <a href="mailto:mail@cps.com" class="menu-footer__mail style-link"
+              >mail@cps.com</a
+            >
+            <a href="tel:+78008908900" class="menu-footer__tel style-link"
+              >8 800 890 8900</a
+            >
+            <div class="menu-footer__lang">
+              <a href="#" class="lang lang--active style-link">ru</a>
+              <a href="#" class="lang style-link">en</a>
+              <a href="#" class="lang style-link">ch</a>
+            </div>
+          </footer>
+
+          <!-- //footer -->
+        </div>
+        <!-- //menu -->
+
+        <!-- content -->
+        <div class="content">
+          <!-- header -->
+          <header class="header">
+            <h1 class="header__title">Услуги и сервисы</h1>
+
+            <nav class="nav">
+              <a href="#" class="nav__wrapper">
+                <div class="nav__text">Оставить заявку</div>
+                <div class="icon icon__application"></div>
+              </a>
+              <a href="#" class="nav__wrapper">
+                <div class="nav__text">Статус ремонта</div>
+                <div class="icon icon__status"></div>
+              </a>
+
+              <div class="nav__left">
+                <a href="#" class="icon icon__menu"></a>
+                <div class="nav__separator tablet"></div>
+                <a href="#" class="icon__logo"></a>
+                <div class="nav__separator mobile"></div>
+              </div>
+
+              <div class="nav__right">
+                <a href="#" class="icon icon__tel tablet"></a>
+                <a href="#" class="icon icon__message tablet"></a>
+                <a href="#" class="icon icon__contacts tablet"></a>
+                <div class="nav__separator tablet"></div>
+                <a href="#" class="icon icon__application"></a>
+                <a href="#" class="icon icon__status"></a>
+              </div>
+            </nav>
+          </header>
+          <!-- //header -->
+
+          <!-- content-menu -->
+          <menu class="content-menu">
+            <li class="content-menu__item content-menu__item--active"
+              ><a href="#" class="content-menu__link"
+                >Ремонтируемые устройства</a
+              ></li
+            >
+            <li class="content-menu__item"
+              ><a href="#" class="content-menu__link"
+                >Дополнительные услуги</a
+              ></li
+            >
+            <li class="content-menu__item"
+              ><a href="#" class="content-menu__link">Цены на услуги</a></li
+            >
+            <li class="content-menu__item"
+              ><a href="#" class="content-menu__link"
+                >Адреса сервисных центров</a
+              ></li
+            >
+            <li class="content-menu__item"
+              ><a href="#" class="content-menu__link">Специальные цены</a></li
+            >
+            <li class="content-menu__item"
+              ><a href="#" class="content-menu__link">Отзывы</a></li
+            >
+          </menu>
+          <!-- //content-menu -->
+
+          <!-- description -->
+          <section class="description">
+            <div class="description__wrapper">
+              <p class="description__p"
+                >Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.</p
+              >
+              <p class="description__p description__p--tablet"
+                >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера</p
+              >
+              <a href="#" class="description__read-more">Читать далее</a>
+            </div>
+            <div class="description__image"></div>
+          </section>
+          <!-- //description -->
+          <!-- line-1 -->
+          <div class="line">
+            <h2 class="line__title">Ремонт техники различных брендов</h2>
+
+            <!-- Slider main container -->
+            <div class="swiper container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper swiper-wrapper--height">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-1.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-2.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-3.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-4.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-5.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-6.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-7.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-1.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-2.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper__img"
+                    src="./img/content/swiper/Bitmap-img-3.png"
+                    alt="hp"
+                  />
+                  <div class="icon__swiper"></div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <!-- //line-1 -->
+        </div>
+        <!-- //content -->
+      </main>
+    </div>
   </body>
 </html>

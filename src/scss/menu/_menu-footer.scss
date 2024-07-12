@@ -1,0 +1,44 @@
+.menu-footer {
+}
+.menu-footer__icon {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+
+.menu-footer__mail {
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.menu-footer__tel {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.menu-footer__lang {
+}
+
+.style-link {
+  text-decoration: none;
+  color: inherit;
+}
+.style-link:hover {
+  color: #7e7e82;
+}
+
+.lang {
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+
+.lang--active {
+  color: #7e7e82;
+}

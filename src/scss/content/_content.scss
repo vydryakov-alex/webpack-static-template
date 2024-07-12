@@ -1,0 +1,15 @@
+.content {
+  // width: 100%;
+  background-color: #f8f8f8;
+  min-width: 320px;
+
+  @media (min-width: 768px) {
+    min-width: 768px;
+    padding: 0 24px;
+  }
+
+  @media (min-width: 1120px) {
+    // min-width: 1120px;
+    padding: 0 34px;
+  }
+}
