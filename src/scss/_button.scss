@@ -1,0 +1,33 @@
+.btn-order {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 4px 12px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 16px;
+  width: 119px;
+  height: 32px;
+  background-color: #ff3e79;
+
+  &__text {
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    // text-align: right;
+    color: #fff;
+  }
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+    background-image: url("../img/button/btn-order.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

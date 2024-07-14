@@ -1,5 +1,11 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+// import { Pagination } from 'swiper/modules';
+// import Pagination from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
 
 const changer = function () {
   console.log('изменился размер окна')
@@ -12,13 +18,15 @@ const changer = function () {
       direction: 'horizontal',
       loop: true,
       spaceBetween: 16,
-      slidesPerView: 1.3,
+      slidesPerView: 1.19,
+      // shadow: true,
+
   
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      //   type: 'bullets',
+        // type: 'bullets',
       },
   
       keyboard: {
@@ -36,7 +44,7 @@ const changer = function () {
     let buttonOpen = document.querySelector('.footer__open');
     let buttonClose = document.querySelector('.footer__close');
     let swiper = document.querySelector('.swiper-wrapper');
-  
+   
     buttonOpen.addEventListener('click', function() {
         swiper.classList.remove('swiper-wrapper--height');
         buttonOpen.classList.add('hide');

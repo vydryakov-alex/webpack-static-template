@@ -1,0 +1,55 @@
+.footer {
+  padding: 0 16px;
+
+  &__description {
+    padding-right: 10px;
+
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1b1c21;
+  }
+
+  &__offer {
+    position: relative;
+    margin-bottom: 30px;
+    padding-right: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #1b1c21;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: 165px;
+      width: 24px;
+      height: 24px;
+      background-image: url('../img/icon/icon-offer.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+  }
+
+  &__copyright {
+    width: calc(100% + 32px);
+    transform: translateX(-16px);
+    padding-top: 16px;
+
+    border-top: 1px solid #d9fff5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14286;
+    text-align: center;
+    color: #7e7e82;
+
+    & p {
+      margin-bottom: 16px;
+    }
+  }
+}
