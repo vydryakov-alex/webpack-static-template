@@ -1,14 +1,23 @@
 .footer {
   padding: 0 16px;
 
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
   &__description {
     padding-right: 10px;
-
     margin-bottom: 25px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
     color: #1b1c21;
+
+    @media (min-width: 768px) {
+      width: 425px;
+      margin-bottom: 16px;
+    }
   }
 
   &__offer {
@@ -26,13 +35,16 @@
       content: '';
       position: absolute;
       bottom: -1px;
-      right: 165px;
+      left: 98px;
       width: 24px;
       height: 24px;
       background-image: url('../img/icon/icon-offer.svg');
       background-repeat: no-repeat;
       background-position: center;
 
+      @media (min-width: 768px) {
+        left: 280px;
+      }
     }
   }
 
@@ -48,8 +60,34 @@
     text-align: center;
     color: #7e7e82;
 
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% + 48px);
+      transform: translateX(-24px);
+      padding: 32px 24px 25px;
+
+      text-align: left;
+    }
+
     & p {
       margin-bottom: 16px;
+
+      &:last-child {
+        @media (min-width: 1440px) {
+          width: 330px;
+        }
+
+      }
+
+      @media (min-width: 768px) {
+        width: 214px;
+        margin-bottom: 0;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
     }
   }
 }

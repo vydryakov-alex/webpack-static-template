@@ -1,0 +1,84 @@
+.price {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: table;
+    margin-bottom: 24px;
+    width: 100%;
+    border-collapse: collapse;
+
+    & thead {
+    }
+
+    & th {
+      padding: 16px 0;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14286;
+      color: #7e7e82;
+      text-align: left;
+
+      &:nth-child(1) {
+        padding-left: 16px;
+      }
+    }
+
+    & tbody {
+      background-color: white;
+      padding-left: 26px;
+    }
+
+    & tr:last-child {
+      & td {
+        border-bottom: none;
+      }
+    }
+
+    & td {
+      padding: 16px 0;
+      border-bottom: solid 1px #eaeaea;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.28571;
+      letter-spacing: 0.01em;
+      color: #1b1c21;
+
+      &:nth-child(1) {
+        width: 57%;
+        padding-left: 16px;
+
+        @media (min-width: 1440px) {
+          width: 50%;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 12%;
+
+        @media (min-width: 1440px) {
+          width: 20%;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 12%;
+
+        @media (min-width: 1440px) {
+          width: 20%;
+        }
+      }
+
+      &:last-child {
+        width: 19%;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        @media (min-width: 1440px) {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}

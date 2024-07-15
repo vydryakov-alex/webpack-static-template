@@ -58,4 +58,9 @@
   &__contacts {
     background-image: url('../img/icon/icon-contacts.svg');
   }
+
+  &__swiper__line-2 {
+    align-self: flex-end;
+    // margin-left: 70px;
+  }
 }
