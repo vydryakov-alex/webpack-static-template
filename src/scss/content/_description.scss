@@ -73,6 +73,7 @@
   }
 
   &__image {
+
     flex-shrink: 0;
     width: 320px;
     height: 176px;
@@ -87,6 +88,7 @@
       margin: 0;
       width: 360px;
       height: 208px;
+
     }
 
     @media (min-width: 1440px) {

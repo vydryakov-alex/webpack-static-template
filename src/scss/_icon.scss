@@ -63,4 +63,8 @@
     align-self: flex-end;
     // margin-left: 70px;
   }
+
+  &__close {
+    background-image: url('../img/icon/icon-close.svg');
+  }
 }

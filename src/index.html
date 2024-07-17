@@ -490,7 +490,7 @@
               единичную услугу. Для получения коммерческого предложения на
               постоянное обслуживание, оставьте заявку.
             </div>
-            <div class="footer__offer"> Получить коммерческое предложение </div>
+            <a href="#" class="footer__offer"> Получить коммерческое предложение </a>
             <div class="footer__copyright">
               <p
                 >© 2019 CPS <br />
@@ -507,70 +507,74 @@
         </div>
         <!-- //content -->
       </main>
-
-      <!-- modal__feedback -->
-      <div class="modal modal__feedback hide">
-        <div class="modal__title"> Обратная связь </div>
-        <div class="modal__form">
-          <input class="modal__input" type="text" placeholder="Имя" />
-
-          <input class="modal__input" type="tel" placeholder="Телефон" />
-
-          <input
-            class="modal__input"
-            type="email"
-            placeholder="Электронная почта"
-          />
-
-          <textarea
-            class="modal__input"
-            placeholder="Сообщение"
-            rows="3"
-          ></textarea>
-
-          <div class="modal_personal-data">
-            Нажимая “отправить”, вы даете согласие на
-            <span class="modal_personal-data--red"
-              >обработку персональных данных</span
-            >
-            и соглашаетесь с нашей
-            <span class="modal_personal-data--red">
-              политикой конфиденциальности</span
-            >
-          </div>
-
-          <button class="btn-order modal__btn" type="submit">
-            <div class="btn-order__text">отправить</div>
-            <div class="btn-order__icon"></div>
-          </button>
-        </div>
-      </div>
-      <!-- //modal__feedback -->
-
-            <!-- modal__call -->
-            <div class="modal modal__call hide">
-              <div class="modal__title"> Обратная связь </div>
-              <div class="modal__form">                 
-                <input class="modal__input" type="tel" placeholder="Телефон" />
-            
-                <div class="modal_personal-data">
-                  Нажимая “отправить”, вы даете согласие на
-                  <span class="modal_personal-data--red"
-                    >обработку персональных данных</span
-                  >
-                  и соглашаетесь с нашей
-                  <span class="modal_personal-data--red">
-                    политикой конфиденциальности</span
-                  >
-                </div>
-      
-                <button class="btn-order modal__btn" type="submit">
-                  <div class="btn-order__text">отправить</div>
-                  <div class="btn-order__icon"></div>
-                </button>
-              </div>
-            </div>
-            <!-- //modal__call -->
     </div>
+
+    <!-- modal__feedback -->
+    <div class="modal modal__feedback hide">
+      <div class="modal__close icon icon__close"></div>
+
+      <div class="modal__title"> Обратная связь </div>
+
+      <div class="modal__form">
+        <input class="modal__input" type="text" placeholder="Имя" />
+
+        <input class="modal__input" type="tel" placeholder="Телефон" />
+
+        <input
+          class="modal__input"
+          type="email"
+          placeholder="Электронная почта"
+        />
+
+        <textarea
+          class="modal__input"
+          placeholder="Сообщение"
+          rows="3"
+        ></textarea>
+
+        <div class="modal_personal-data">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#" class="modal_personal-data--red"
+            >обработку персональных данных</a
+          >
+          и соглашаетесь с нашей
+          <a href="#" class="modal_personal-data--red">
+            политикой конфиденциальности</a
+          >
+        </div>
+
+        <button class="btn-order modal__btn" type="submit">
+          <div class="btn-order__text">отправить</div>
+          <div class="btn-order__icon"></div>
+        </button>
+      </div>
+    </div>
+    <!-- //modal__feedback -->
+
+    <!-- modal__call -->
+    <div class="modal modal__call hide">
+      <div class="modal__close icon icon__close"> </div>
+      <div class="modal__title"> Заказать звонок </div>
+      <div class="modal__form">
+        <input class="modal__input" type="tel" placeholder="Телефон" />
+
+        <div class="modal_personal-data">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#" class="modal_personal-data--red"
+            >обработку персональных данных</a
+          >
+          и соглашаетесь с нашей
+          <a href="#" class="modal_personal-data--red">
+            политикой конфиденциальности</a
+          >
+        </div>
+
+        <button class="btn-order modal__btn" type="submit">
+          <div class="btn-order__text">отправить</div>
+          <div class="btn-order__icon"></div>
+        </button>
+      </div>
+    </div>
+    <!-- //modal__call -->
   </body>
 </html>
