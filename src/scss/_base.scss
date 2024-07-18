@@ -73,4 +73,7 @@ body {
 .grey {
   filter: grayscale(90%);
   opacity: 0.2;
+  pointer-events: none;
+  height: 100vh;
+  overflow: hidden;
 }

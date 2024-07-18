@@ -1,15 +1,14 @@
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
-// import { Pagination } from 'swiper/modules';
-// import Pagination from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import '../scss/style.scss'
 
 const changer = function () {
-  console.log('изменился размер окна')
-  if (document.documentElement.clientWidth < 767.98) {
+  console.log('размер окна:', document.documentElement.clientWidth)
+  if (document.documentElement.clientWidth < 767.99) {
     console.log('меньше 767')
+
+    // меню скрыто
+    document.querySelector('.menu').classList.add('hide')
 
     //запускаем свайпер
     const swiper = new Swiper('.swiper', {
@@ -37,56 +36,6 @@ const changer = function () {
         invert: true
       }
     })
-    // меню скрыто 320p
-    document.querySelector('.menu').classList.add('hide')
-
-    // кнопки
-    let buttonOpenMenu = document.querySelector('.icon__menu')
-    let buttonCloseMenu = document.querySelector('.menu__close-menu')
-
-    let buttonOpenCall = document.querySelector('.icon__tel')
-    let buttonCloseCall = document.querySelector('.modal__call .modal__close')
-
-    let buttonOpenFeedback = document.querySelector('.icon__message')
-    let buttonCloseFeedback = document.querySelector('.modal__feedback .modal__close')
-
-    
-
-    // селекторы
-    let menu = document.querySelector('.menu')
-    let content = document.querySelector('.content')
-    let call = document.querySelector('.modal__call')
-    let feedback = document.querySelector('.modal__feedback')
-
-
-    // функции
-    let showMenu = function () {
-      menu.classList.remove('hide')
-    }
-    let hideMenu = function () {
-      menu.classList.add('hide')
-    }
-
-    let showСontent = function () {
-      content.classList.remove('hide')
-    }
-    let hideСontent = function () {
-      content.classList.add('hide')
-    }
-
-    let showСall = function () {
-      call.classList.remove('hide')
-    }
-    let hideСall = function () {
-      call.classList.add('hide')
-    }
-
-    let showFeedback = function () {
-      feedback.classList.remove('hide')
-    }
-    let hideFeedback = function () {
-      feedback.classList.add('hide')
-    }
 
     window.addEventListener('click', function (evt) {
       //открываем меню
@@ -106,6 +55,7 @@ const changer = function () {
       //открываем call
       if (evt.target === buttonOpenCall) {
         // показываем call
+        console.log('нажата call')
         showСall()
 
         // скрываем меню
@@ -131,48 +81,211 @@ const changer = function () {
         hideFeedback()
         showMenu()
       }
+    })
+  } else if (
+    document.documentElement.clientWidth >= 768 &&
+    document.documentElement.clientWidth < 1439
+  ) {
+    console.log('больше 768 и меньше 1440')
 
+    // меню скрыто
+    document.querySelector('.menu').classList.add('hide')
+
+    window.addEventListener('click', function (evt) {
+      console.log('wind target', evt.target)
+      console.log('wind currentTarget', evt.currentTarget)
+
+      //закрываем меню
+      if (
+        !menu.classList.contains('hide') &&
+        (evt.target === buttonCloseMenu || !evt.target.closest('.menu'))
+      ) {
+        hideMenu()
+        greyСontent()
+      }
+
+      //открываем меню
+      if (evt.target === buttonOpenMenu) {
+        showMenu()
+        greyСontent()
+      }
+
+      // закрываем call
+      if (
+        !call.classList.contains('hide') &&
+        (evt.target === buttonCloseCall || !evt.target.closest('.modal__call'))
+      ) {
+        hideСall()
+        greyСontent()
+      }
+
+      //открываем call
+      if (evt.target === buttonOpenCall2) {
+        showСall()
+        greyСontent()
+      }
+
+      // закрываем feedback
+      if (
+        !feedback.classList.contains('hide') &&
+        (evt.target === buttonCloseFeedback ||
+          !evt.target.closest('.modal__feedback'))
+      ) {
+        hideFeedback()
+        greyСontent()
+      }
+
+      // открываем feedback
+      if (evt.target === buttonOpenFeedback2) {
+        showFeedback()
+        greyСontent()
+      }
     })
   } else {
-    console.log('больше 767')
+    console.log('больше 1440')
 
-    let buttonOpenCloseSwiper = document.querySelectorAll('.line__open-close')
-    let buttonOpenSwiper = document.querySelectorAll('.line__open-close--open')
-    let buttonCloseSwiper = document.querySelectorAll(
-      '.line__open-close--close'
-    )
-    let swiper = document.querySelectorAll('.swiper-wrapper')
+    window.addEventListener('click', function (evt) {
+      console.log('wind target', evt.target)
+      console.log('wind currentTarget', evt.currentTarget)
 
-    //показываем-скрываем свайперы
-    for (let i = 0; i < buttonOpenCloseSwiper.length; i++) {
-      buttonOpenCloseSwiper[i].addEventListener('click', function () {
-        swiper[i].classList.toggle('swiper-wrapper--height')
-        buttonOpenSwiper[i].classList.toggle('hide')
-        buttonCloseSwiper[i].classList.toggle('hide')
-      })
-    }
+      // закрываем call
+      if (
+        !call.classList.contains('hide') &&
+        (evt.target === buttonCloseCall || !evt.target.closest('.modal__call'))
+      ) {
+        hideСall()
+        greyСontent()
+      }
 
-    //показываем свайперы
-    // for (let i = 0; i < buttonOpenSwiper.length; i++) {
-    //   buttonOpenSwiper[i].addEventListener('click', function () {
-    //     swiper[i].classList.remove('swiper-wrapper--height')
-    //     buttonOpenSwiper[i].classList.add('hide')
-    //     buttonCloseSwiper[i].classList.remove('hide')
-    //   })
-    // }
+      //открываем call
+      if (evt.target === buttonOpenCall) {
+        showСall()
+        greyСontent()
+      }
 
-    // //скрываем свайперы
-    // for (let i = 0; i < buttonCloseSwiper.length; i++) {
-    //   buttonCloseSwiper[i].addEventListener('click', function () {
-    //     swiper[i].classList.add('swiper-wrapper--height')
-    //     buttonOpenSwiper[i].classList.remove('hide')
-    //     buttonCloseSwiper[i].classList.add('hide')
-    //   })
-    // }
+      // закрываем feedback
+      if (
+        !feedback.classList.contains('hide') &&
+        (evt.target === buttonCloseFeedback ||
+          !evt.target.closest('.modal__feedback'))
+      ) {
+        hideFeedback()
+        greyСontent()
+      }
+
+      // открываем feedback
+      if (evt.target === buttonOpenFeedback) {
+        showFeedback()
+        greyСontent()
+      }
+    })
   }
 }
-changer()
-
-import '../scss/style.scss'
 
 console.log('Works!')
+
+// -----------------------------------------------------
+
+// кнопки
+let buttonOpenMenu = document.querySelector('.icon__menu')
+let buttonCloseMenu = document.querySelector('.menu__close-menu')
+
+let buttonOpenCall = document.querySelector('.icon__tel')
+let buttonOpenCall2 = document.querySelector('.icon__tel.tablet')
+let buttonCloseCall = document.querySelector('.modal__call .modal__close')
+
+let buttonOpenFeedback = document.querySelector('.icon__message')
+let buttonOpenFeedback2 = document.querySelector('.icon__message.tablet')
+let buttonCloseFeedback = document.querySelector(
+  '.modal__feedback .modal__close'
+)
+
+let buttonOpenCloseSwiper = document.querySelectorAll('.line__open-close')
+let buttonOpenSwiper = document.querySelectorAll('.line__open-close--open')
+let buttonCloseSwiper = document.querySelectorAll('.line__open-close--close')
+
+// селекторы
+let menu = document.querySelector('.menu')
+let content = document.querySelector('.content')
+let main = document.querySelector('.main')
+
+let call = document.querySelector('.modal__call')
+let feedback = document.querySelector('.modal__feedback')
+let swiper = document.querySelectorAll('.swiper-wrapper')
+
+// функции
+let showMenu = function () {
+  menu.classList.remove('hide')
+}
+let hideMenu = function () {
+  menu.classList.add('hide')
+}
+
+let showСontent = function () {
+  content.classList.remove('hide')
+}
+let hideСontent = function () {
+  content.classList.add('hide')
+}
+
+let greyСontent = function () {
+  main.classList.toggle('grey')
+}
+
+let showСall = function () {
+  call.classList.remove('hide')
+}
+let hideСall = function () {
+  call.classList.add('hide')
+}
+
+let showFeedback = function () {
+  feedback.classList.remove('hide')
+}
+let hideFeedback = function () {
+  feedback.classList.add('hide')
+}
+
+//показываем-скрываем свайперы
+for (let i = 0; i < buttonOpenCloseSwiper.length; i++) {
+  buttonOpenCloseSwiper[i].addEventListener('click', function () {
+    swiper[i].classList.toggle('swiper-wrapper--height')
+    buttonOpenSwiper[i].classList.toggle('hide')
+    buttonCloseSwiper[i].classList.toggle('hide')
+  })
+}
+
+//media-------------------------------------------
+const mobileWidthMediaQuery = window.matchMedia(
+  '(min-width: 0px) and (max-width: 767.98px)'
+)
+const tabletWidthMediaQuery = window.matchMedia(
+  '(min-width: 768px) and (max-width: 1439.98px)'
+)
+const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
+
+window.addEventListener('resize', function () {
+  console.log('изменился размер окна')
+
+  /////////////////////////////media 320p
+  if (mobileWidthMediaQuery.matches) {
+    console.log('листенер 320')
+    changer()
+  }
+  /////////////////////////////media 768p
+  if (tabletWidthMediaQuery.matches) {
+    console.log('листенер 768')
+    // меню скрыто 768p
+
+    changer()
+  }
+
+  /////////////////////////////media 1440p
+  if (desctopWidthMediaQuery.matches) {
+    console.log('листенер 1440')
+
+    changer()
+  }
+})
+
+changer()

@@ -1,4 +1,12 @@
 .menu-footer {
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+
   &__icon {
     display: flex;
     justify-content: flex-start;
@@ -6,14 +14,13 @@
     align-items: center;
     margin-bottom: 16px;
   }
-  
-  
+
   &__mail {
     display: block;
     line-height: 1.5;
     margin-bottom: 12px;
   }
-  
+
   &__tel {
     display: block;
     font-size: 24px;
@@ -32,7 +39,6 @@
   }
 }
 
-
 .lang {
   text-transform: uppercase;
   margin-bottom: 7px;
@@ -42,4 +48,3 @@
     color: #7e7e82;
   }
 }
-
