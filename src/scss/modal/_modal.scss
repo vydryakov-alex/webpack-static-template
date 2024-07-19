@@ -32,12 +32,6 @@
     }
   }
 
-  &__feedback {
-  }
-
-  &__call {
-  }
-
   &__title {
     margin-bottom: 24px;
     position: relative;
@@ -53,7 +47,7 @@
       position: absolute;
       height: 40px;
       width: 4px;
-      background-color: #41f6d7;
+      background-color: $color-blue;
       top: -25px;
       left: -16px;
 
@@ -68,14 +62,10 @@
     }
   }
 
-  &__form {
-  }
-
   &__input {
     width: 100%;
     padding: 12px 16px;
     margin-bottom: 16px;
-
     border: 1px solid #eaeaea;
     border-radius: 8px;
 
@@ -98,7 +88,7 @@
     color: #7e7e82;
 
     &--red {
-      color: #ff3e79;
+      color: $color-red;
       text-decoration: none;
     }
   }

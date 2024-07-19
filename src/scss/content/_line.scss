@@ -1,10 +1,5 @@
 .line {
   padding: 0 16px;
-  //   box-shadow: -68px 0px 38px -49px rgba(3, 135, 236, 0.884) inset;
-  //   position: relative;
-  // top: 0;
-  // right: 0;
-  //   z-index: 100;
 
   @media (min-width: 768px) {
     padding: 0;
@@ -13,7 +8,6 @@
   &__title {
     width: calc(100% + 32px);
     transform: translateX(-16px);
-
     padding: 16px 0;
     padding-left: 16px;
 
@@ -73,7 +67,6 @@
         width: 8px;
         height: 11px;
         background-image: url('../img/icon/swiper/swiper-close.svg');
-
         content: '';
         position: absolute;
         top: 5px;

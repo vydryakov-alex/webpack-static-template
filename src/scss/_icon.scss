@@ -2,7 +2,7 @@
   display: block;
   width: 40px;
   height: 40px;
-  background-color: #ff3e79;
+  background-color: $color-red;
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: center;
@@ -61,7 +61,6 @@
 
   &__swiper__line-2 {
     align-self: flex-end;
-    // margin-left: 70px;
   }
 
   &__close {

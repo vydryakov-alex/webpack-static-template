@@ -1,14 +1,13 @@
-// @import '../scss/normalize.scss';
-
 @import '~normalize.css';
 @import '../../node_modules/swiper/swiper.min.css';
 @import '../../node_modules/swiper/modules/pagination.min.css';
 
-
+@import '../scss/_variables.scss';
 @import '../scss/_base.scss';
 @import '../scss/_icon.scss';
 @import '../scss/_adaptability.scss';
 @import '../scss/_button.scss';
+@import '../scss/_main.scss';
 
 
 @import '../scss/menu/_menu.scss';

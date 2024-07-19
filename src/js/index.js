@@ -5,6 +5,7 @@ import '../scss/style.scss'
 const changer = function () {
   console.log('размер окна:', document.documentElement.clientWidth)
   if (document.documentElement.clientWidth < 767.99) {
+    // 320p-----------------------------------------------
     console.log('меньше 767')
 
     // меню скрыто
@@ -86,6 +87,8 @@ const changer = function () {
     document.documentElement.clientWidth >= 768 &&
     document.documentElement.clientWidth < 1439
   ) {
+    // 768p-----------------------------------------------
+
     console.log('больше 768 и меньше 1440')
 
     // меню скрыто
@@ -142,6 +145,8 @@ const changer = function () {
       }
     })
   } else {
+    // 1440p-----------------------------------------------
+
     console.log('больше 1440')
 
     window.addEventListener('click', function (evt) {
@@ -272,18 +277,16 @@ window.addEventListener('resize', function () {
     console.log('листенер 320')
     changer()
   }
+  
   /////////////////////////////media 768p
   if (tabletWidthMediaQuery.matches) {
     console.log('листенер 768')
-    // меню скрыто 768p
-
     changer()
   }
 
   /////////////////////////////media 1440p
   if (desctopWidthMediaQuery.matches) {
     console.log('листенер 1440')
-
     changer()
   }
 })
