@@ -373,7 +373,8 @@ body {
   background-position: center;
   transition: opacity 0.7s ease-in-out; }
   .icon:hover {
-    opacity: 0.6; }
+    opacity: 0.6;
+    cursor: pointer; }
   .icon__swiper {
     height: 40px;
     width: 40px;
