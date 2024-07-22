@@ -22,7 +22,7 @@
 
   &__offer {
     display: block;
-    width: 195px; 
+    width: 195px;
     position: relative;
     margin-bottom: 30px;
     padding-right: 10px;
@@ -35,7 +35,11 @@
     color: #1b1c21;
 
     @media (min-width: 768px) {
-      width: 100%;
+      width: 300px;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
 
     &::after {
@@ -79,18 +83,27 @@
     & p {
       margin-bottom: 16px;
 
-      &:last-child {
-        @media (min-width: 1440px) {
-          width: 330px;
-        }
-      }
-
       @media (min-width: 768px) {
         width: 214px;
         margin-bottom: 0;
 
         &:last-child {
           text-align: right;
+        }
+      }
+
+      &:last-child {
+        @media (min-width: 1440px) {
+          width: 330px;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        color: #7e7e82;
+
+        &:hover {
+          text-decoration: underline;
         }
       }
     }

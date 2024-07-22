@@ -42,14 +42,12 @@ const changer = function () {
       //открываем меню
       if (evt.target === buttonOpenMenu) {
         showMenu()
-
         hideСontent()
       }
 
       //закрываем меню
       if (evt.target === buttonCloseMenu) {
         hideMenu()
-
         showСontent()
       }
 
@@ -58,7 +56,6 @@ const changer = function () {
         // показываем call
         console.log('нажата call')
         showСall()
-
         // скрываем меню
         hideMenu()
       }
@@ -146,7 +143,6 @@ const changer = function () {
     })
   } else {
     // 1440p-----------------------------------------------
-
     console.log('больше 1440')
 
     window.addEventListener('click', function (evt) {
@@ -260,35 +256,35 @@ for (let i = 0; i < buttonOpenCloseSwiper.length; i++) {
   })
 }
 
-//media-------------------------------------------
-const mobileWidthMediaQuery = window.matchMedia(
-  '(min-width: 0px) and (max-width: 767.98px)'
-)
-const tabletWidthMediaQuery = window.matchMedia(
-  '(min-width: 768px) and (max-width: 1439.98px)'
-)
-const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
-
-window.addEventListener('resize', function () {
-  console.log('изменился размер окна')
-
-  /////////////////////////////media 320p
-  if (mobileWidthMediaQuery.matches) {
-    console.log('листенер 320')
-    changer()
-  }
-  
-  /////////////////////////////media 768p
-  if (tabletWidthMediaQuery.matches) {
-    console.log('листенер 768')
-    changer()
-  }
-
-  /////////////////////////////media 1440p
-  if (desctopWidthMediaQuery.matches) {
-    console.log('листенер 1440')
-    changer()
-  }
-})
-
 changer()
+
+//media-------------------------------------------
+// const mobileWidthMediaQuery = window.matchMedia(
+//   '(min-width: 0px) and (max-width: 767.98px)'
+// )
+// const tabletWidthMediaQuery = window.matchMedia(
+//   '(min-width: 768px) and (max-width: 1439.98px)'
+// )
+// const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
+
+// window.addEventListener('resize', function () {
+//   console.log('изменился размер окна')
+
+//   /////////////////////////////media 320p
+//   if (mobileWidthMediaQuery.matches) {
+//     console.log('листенер 320')
+//     changer()
+//   }
+
+//   /////////////////////////////media 768p
+//   if (tabletWidthMediaQuery.matches) {
+//     console.log('листенер 768')
+//     changer()
+//   }
+
+//   /////////////////////////////media 1440p
+//   if (desctopWidthMediaQuery.matches) {
+//     console.log('листенер 1440')
+//     changer()
+//   }
+// })
