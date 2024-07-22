@@ -155,13 +155,13 @@ const changer = function () {
         (evt.target === buttonCloseCall || !evt.target.closest('.modal__call'))
       ) {
         hideСall()
-        greyСontent()
+        greyMain()
       }
 
       //открываем call
       if (evt.target === buttonOpenCall) {
         showСall()
-        greyСontent()
+        greyMain()
       }
 
       // закрываем feedback
@@ -171,13 +171,13 @@ const changer = function () {
           !evt.target.closest('.modal__feedback'))
       ) {
         hideFeedback()
-        greyСontent()
+        greyMain()
       }
 
       // открываем feedback
       if (evt.target === buttonOpenFeedback) {
         showFeedback()
-        greyСontent()
+        greyMain()
       }
     })
   }
@@ -228,10 +228,13 @@ let showСontent = function () {
 let hideСontent = function () {
   content.classList.add('hide')
 }
-
 let greyСontent = function () {
+  content.classList.toggle('grey')
+}
+let greyMain = function () {
   main.classList.toggle('grey')
 }
+
 
 let showСall = function () {
   call.classList.remove('hide')
