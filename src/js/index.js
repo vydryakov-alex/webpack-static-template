@@ -2,6 +2,51 @@ import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
 import '../scss/style.scss'
 
+//селекторы
+import {
+  menu,
+  content,
+  main,
+  call,
+  feedback,
+  swiper
+} from './modules/selectors.js'
+
+//кнопки
+import {
+  buttonOpenMenu,
+  buttonCloseMenu,
+  buttonOpenCall,
+  buttonOpenCall2,
+  buttonCloseCall,
+  buttonOpenFeedback,
+  buttonOpenFeedback2,
+  buttonCloseFeedback,
+  buttonOpenCloseSwiper,
+  buttonOpenSwiper,
+  buttonCloseSwiper
+} from './modules/buttons.js'
+
+//функции модалок
+// import { showMenu } from './modules/function_modal.js'
+
+import {
+  showMenu,
+  hideMenu,
+  showСontent,
+  hideСontent,
+  greyСontent,
+  greyMain,
+  showСall,
+  hideСall,
+  showFeedback,
+  hideFeedback
+} from './modules/function_modal.js'
+
+// function showMenu() {
+//   menu.classList.remove('hide')
+// }
+
 const changer = function () {
   console.log('размер окна:', document.documentElement.clientWidth)
   if (document.documentElement.clientWidth < 767.99) {
@@ -185,70 +230,7 @@ const changer = function () {
 
 console.log('Works!')
 
-// -----------------------------------------------------
-
-// кнопки
-let buttonOpenMenu = document.querySelector('.icon__menu')
-let buttonCloseMenu = document.querySelector('.menu__close-menu')
-
-let buttonOpenCall = document.querySelector('.icon__tel')
-let buttonOpenCall2 = document.querySelector('.icon__tel.tablet')
-let buttonCloseCall = document.querySelector('.modal__call .modal__close')
-
-let buttonOpenFeedback = document.querySelector('.icon__message')
-let buttonOpenFeedback2 = document.querySelector('.icon__message.tablet')
-let buttonCloseFeedback = document.querySelector(
-  '.modal__feedback .modal__close'
-)
-
-let buttonOpenCloseSwiper = document.querySelectorAll('.line__open-close')
-let buttonOpenSwiper = document.querySelectorAll('.line__open-close--open')
-let buttonCloseSwiper = document.querySelectorAll('.line__open-close--close')
-
-// селекторы
-let menu = document.querySelector('.menu')
-let content = document.querySelector('.content')
-let main = document.querySelector('.main')
-
-let call = document.querySelector('.modal__call')
-let feedback = document.querySelector('.modal__feedback')
-let swiper = document.querySelectorAll('.swiper-wrapper')
-
-// функции
-let showMenu = function () {
-  menu.classList.remove('hide')
-}
-let hideMenu = function () {
-  menu.classList.add('hide')
-}
-
-let showСontent = function () {
-  content.classList.remove('hide')
-}
-let hideСontent = function () {
-  content.classList.add('hide')
-}
-let greyСontent = function () {
-  content.classList.toggle('grey')
-}
-let greyMain = function () {
-  main.classList.toggle('grey')
-}
-
-
-let showСall = function () {
-  call.classList.remove('hide')
-}
-let hideСall = function () {
-  call.classList.add('hide')
-}
-
-let showFeedback = function () {
-  feedback.classList.remove('hide')
-}
-let hideFeedback = function () {
-  feedback.classList.add('hide')
-}
+// ----------------------------------------------------
 
 //показываем-скрываем свайперы
 for (let i = 0; i < buttonOpenCloseSwiper.length; i++) {
@@ -262,32 +244,32 @@ for (let i = 0; i < buttonOpenCloseSwiper.length; i++) {
 changer()
 
 //media-------------------------------------------
-// const mobileWidthMediaQuery = window.matchMedia(
-//   '(min-width: 0px) and (max-width: 767.98px)'
-// )
-// const tabletWidthMediaQuery = window.matchMedia(
-//   '(min-width: 768px) and (max-width: 1439.98px)'
-// )
-// const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
+const mobileWidthMediaQuery = window.matchMedia(
+  '(min-width: 0px) and (max-width: 767.98px)'
+)
+const tabletWidthMediaQuery = window.matchMedia(
+  '(min-width: 768px) and (max-width: 1439.98px)'
+)
+const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
 
-// window.addEventListener('resize', function () {
-//   console.log('изменился размер окна')
+window.addEventListener('resize', function () {
+  console.log('изменился размер окна')
 
-//   /////////////////////////////media 320p
-//   if (mobileWidthMediaQuery.matches) {
-//     console.log('листенер 320')
-//     changer()
-//   }
+  /////////////////////////////media 320p
+  if (mobileWidthMediaQuery.matches) {
+    console.log('листенер 320')
+    changer()
+  }
 
-//   /////////////////////////////media 768p
-//   if (tabletWidthMediaQuery.matches) {
-//     console.log('листенер 768')
-//     changer()
-//   }
+  /////////////////////////////media 768p
+  if (tabletWidthMediaQuery.matches) {
+    console.log('листенер 768')
+    changer()
+  }
 
-//   /////////////////////////////media 1440p
-//   if (desctopWidthMediaQuery.matches) {
-//     console.log('листенер 1440')
-//     changer()
-//   }
-// })
+  /////////////////////////////media 1440p
+  if (desctopWidthMediaQuery.matches) {
+    console.log('листенер 1440')
+    changer()
+  }
+})
