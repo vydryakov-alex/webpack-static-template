@@ -4,7 +4,6 @@ import { menu, content, main, call, feedback, swiper } from './selectors.js'
 export let showMenu = function () {
   menu.classList.remove('hide')
 }
-
 export let hideMenu = function () {
   menu.classList.add('hide')
 }

@@ -28,7 +28,6 @@ import {
 } from './modules/buttons.js'
 
 //функции модалок
-// import { showMenu } from './modules/function_modal.js'
 
 import {
   showMenu,
@@ -42,10 +41,6 @@ import {
   showFeedback,
   hideFeedback
 } from './modules/function_modal.js'
-
-// function showMenu() {
-//   menu.classList.remove('hide')
-// }
 
 const changer = function () {
   console.log('размер окна:', document.documentElement.clientWidth)
