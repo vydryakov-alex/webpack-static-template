@@ -239,32 +239,32 @@ for (let i = 0; i < buttonOpenCloseSwiper.length; i++) {
 changer()
 
 //media-------------------------------------------
-const mobileWidthMediaQuery = window.matchMedia(
-  '(min-width: 0px) and (max-width: 767.98px)'
-)
-const tabletWidthMediaQuery = window.matchMedia(
-  '(min-width: 768px) and (max-width: 1439.98px)'
-)
-const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
+// const mobileWidthMediaQuery = window.matchMedia(
+//   '(min-width: 0px) and (max-width: 767.98px)'
+// )
+// const tabletWidthMediaQuery = window.matchMedia(
+//   '(min-width: 768px) and (max-width: 1439.98px)'
+// )
+// const desctopWidthMediaQuery = window.matchMedia('(min-width: 1440px)')
 
-window.addEventListener('resize', function () {
-  console.log('изменился размер окна')
+// window.addEventListener('resize', function () {
+//   console.log('изменился размер окна')
 
-  /////////////////////////////media 320p
-  if (mobileWidthMediaQuery.matches) {
-    console.log('листенер 320')
-    changer()
-  }
+//   /////////////////////////////media 320p
+//   if (mobileWidthMediaQuery.matches) {
+//     console.log('листенер 320')
+//     changer()
+//   }
 
-  /////////////////////////////media 768p
-  if (tabletWidthMediaQuery.matches) {
-    console.log('листенер 768')
-    changer()
-  }
+//   /////////////////////////////media 768p
+//   if (tabletWidthMediaQuery.matches) {
+//     console.log('листенер 768')
+//     changer()
+//   }
 
-  /////////////////////////////media 1440p
-  if (desctopWidthMediaQuery.matches) {
-    console.log('листенер 1440')
-    changer()
-  }
-})
+//   /////////////////////////////media 1440p
+//   if (desctopWidthMediaQuery.matches) {
+//     console.log('листенер 1440')
+//     changer()
+//   }
+// })
