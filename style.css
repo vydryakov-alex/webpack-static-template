@@ -348,7 +348,7 @@ img {
   vertical-align: top; }
 
 body {
-  font-family: 'TT Lakes', sans-serif;
+  font-family: 'TT Lakes';
   color: #1b1c21;
   font-weight: 500;
   font-size: 16px; }
@@ -473,6 +473,10 @@ button {
     .main {
       width: 1440px;
       margin: 0 auto; } }
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Regular.ttf); }
 
 .menu {
   box-shadow: -2px 0 4px 0 rgba(69, 79, 126, 0.02);
